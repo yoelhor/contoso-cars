@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Claims";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div class="jumbotron">
+    <div ">
+        <ul>
+            @foreach (var claim in ViewBag.Claims)
+            {
+            <li><b>@claim.Key:</b> @claim.Value</li>
+            }
+        </ul>
+</div>
+</div>
