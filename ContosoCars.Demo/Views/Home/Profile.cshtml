@@ -4,12 +4,14 @@
 <h1>@ViewData["Title"]</h1>
 
 <div class="jumbotron">
-    <div ">
+    <div>
         <ul>
             @foreach (var claim in ViewBag.Claims)
             {
-            <li><b>@claim.Key:</b> @claim.Value</li>
+                <li><b>@claim.Key:</b> @claim.Value</li>
             }
         </ul>
-</div>
+    </div>
+
+    <a asp-area="AzureADB2C" asp-controller="Account" asp-action="EditProfile">Edit your profile</a>
 </div>
